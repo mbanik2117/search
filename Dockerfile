@@ -18,6 +18,8 @@ WORKDIR /app
 # Copy package files, Prisma schema, and .env file
 COPY package*.json ./
 
+RUN npm install
+
 # Rebuild sharp to ensure native binaries work on Alpine
 RUN npm rebuild sharp
 
